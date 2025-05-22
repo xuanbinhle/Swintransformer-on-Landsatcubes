@@ -79,4 +79,4 @@ Modified Swin Transformer with 6-channel input adapted to Landsat bands (e.g., R
 
 ---
 
-© 2025 EarthAI - GeoLifeCLEF Challenge
+GeoLifeCLEF25 @ CVPR & LifeCLEF
