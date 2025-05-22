@@ -20,7 +20,7 @@ swin_landsat_module/
 └── main.py
 ```
 
-## 🚀 How to Run
+## 🚀 How to Use
 
 ### 1. Install Requirements
 
@@ -28,10 +28,13 @@ swin_landsat_module/
 pip install torch torchvision timm pandas scikit-learn
 ```
 
-### 2. Run Training + Inference
+---
+
+## 🏋️ Train
 
 ```bash
 python main.py \
+    --mode train \
     --train_data /path/to/train/cubes \
     --train_meta /path/to/train/meta.csv \
     --test_data /path/to/test/cubes \
@@ -39,14 +42,28 @@ python main.py \
     --epochs 20 \
     --lr 0.0002 \
     --batch_size 64 \
+    --save_model_path swin-with-landsat-cubes.pth
+```
+
+---
+
+## 🧪 Inference
+
+📦 Download checkpoint: [Google Drive](https://drive.google.com/drive/folders/1nIU3vMxUDy140LI6O6pqonyq7CANf9Jc?usp=sharing)
+
+```bash
+python main.py \
+    --mode infer \
+    --test_data /path/to/test/cubes \
+    --test_meta /path/to/test/meta.csv \
+    --batch_size 64 \
     --save_model_path swin-with-landsat-cubes.pth \
     --submission_path submission_swintransformer.csv
 ```
 
-## ✅ Outputs
+> ⚠️ In inference mode, training data and metadata are not required.
 
-- `swin-with-landsat-cubes.pth` – trained model
-- `submission_swintransformer.csv` – top-25 prediction per surveyId
+---
 
 ## 🔧 Configuration
 
