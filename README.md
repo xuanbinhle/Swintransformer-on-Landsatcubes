@@ -1,9 +1,7 @@
 
-# Swin Transformer for Landsat Time-Series Classification
-
 This repository trains a modified Swin Transformer with 6-channel Landsat cubes and performs multi-label classification on ecological survey data.
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 swin_landsat_module/
@@ -20,7 +18,7 @@ swin_landsat_module/
 └── main.py
 ```
 
-## 🚀 How to Use
+## How to Use
 
 ### 1. Install Requirements
 
@@ -30,7 +28,7 @@ pip install torch torchvision timm pandas scikit-learn
 
 ---
 
-## 🏋️ Train
+## Train
 
 ```bash
 python main.py \
@@ -47,9 +45,9 @@ python main.py \
 
 ---
 
-## 🧪 Inference
+## Inference
 
-📦 Download checkpoint: [Google Drive](https://drive.google.com/drive/folders/1nIU3vMxUDy140LI6O6pqonyq7CANf9Jc?usp=sharing)
+Download checkpoint: [Google Drive](https://drive.google.com/drive/folders/1nIU3vMxUDy140LI6O6pqonyq7CANf9Jc?usp=sharing)
 
 ```bash
 python main.py \
@@ -61,11 +59,11 @@ python main.py \
     --submission_path submission_swintransformer.csv
 ```
 
-> ⚠️ In inference mode, training data and metadata are not required.
+> In inference mode, training data and metadata are not required.
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 You can modify hyperparameters like:
 - `--epochs`: training epochs
@@ -73,10 +71,6 @@ You can modify hyperparameters like:
 - `--lr`: learning rate
 - `--num_classes`: default `11255`
 
-## 🧠 Model
+## Model
 
 Modified Swin Transformer with 6-channel input adapted to Landsat bands (e.g., RGB, NIR, SWIR1, SWIR2...).
-
----
-
-GeoLifeCLEF25 @ CVPR & LifeCLEF
